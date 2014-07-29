@@ -11,6 +11,3 @@ out
 .settings
 .classpath
 .project
-
-# project personnal configuration
-appengine-application.xml
