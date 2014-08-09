@@ -4,17 +4,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="herve.launay@gmail.com">
-    <link rel="icon" href="../../favicon.ico">
-
+    <meta name="author" content="Herve Launay">
+    <link rel="icon" href="favicon.ico">
     <title>Results Analysis</title>
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
+    <!-- Own stylesheet -->
+    <link rel="stylesheet" href="main.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,22 +22,30 @@
   </head>
   <body>
     <div class="container">
-        <h1>Result Analysis</h1>
-
-        <form class="form-search" role="form">
-        <h2 class="form-search-heading">Athlete</h2>
-        <input id="athlete_name" name="athlete_name" type="text" class="form-control" placeholder="Name" required autofocus/>
-        <input id="athlete_family" name="athlete_family" type="text" class="form-control" placeholder="Family Name" required/>
-        <select id="athlete_category" name="athlete_category"  class="form-control">
-          <option>K1h</option>
-          <option>K1d</option>
-          <option>C1h</option>
-          <option>C1d</option>
-          <option>C2</option>
-        </select>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Analyse</button>
-        </form>
-
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center">Results Analysis</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <form class="form-search" role="form">
+                <h2 class="form-search-heading">Athlete</h2>
+                <input id="athlete_fname" name="athlete_fname" type="text" class="form-control" placeholder="First Name" required autofocus/>
+                <input id="athlete_lname" name="athlete_lname" type="text" class="form-control" placeholder="Last Name" required/>
+                <select id="athlete_category" name="athlete_category"  class="form-control">
+                    <option>K1H</option>
+                    <option>K1D</option>
+                    <option>C1H</option>
+                    <option>C1D</option>
+                    <option>C2M</option>
+                    <option>C2H</option>
+                    <option>C2D</option>
+                </select>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Analyse</button>
+                </form>
+            </div>
+        </div>
     </div> <!-- /container -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
