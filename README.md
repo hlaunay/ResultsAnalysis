@@ -22,3 +22,12 @@ This application is made for Google App Engine.
     $ cd resultanalysis-ear
     $ mvn appengine:update
     
+#Architecture
+
+This web application front end use following frameworks : 
+
+* [Angular.js](https://angularjs.org/)
+* [Twitter Bootstrap](http://getbootstrap.com/)
+* [JQuery](http://jquery.com/)
+
+Web application back end is full java code using [Google App Engine](https://developers.google.com/appengine/) API.

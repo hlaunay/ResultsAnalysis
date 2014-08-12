@@ -1,0 +1,19 @@
+<form class="form-search" name="searchForm" role="form" ng-submit="searchForm.$valid && athleteFormCtrl.search()" novalidate>
+    <blockquote>
+        <b>{{athleteFormCtrl.athlete.fname}}</b> {{athleteFormCtrl.athlete.lname}}<br/>
+        {{athleteFormCtrl.athlete.category}}
+    </blockquote>
+    <h2 class="form-search-heading">Athlete</h2>
+    <input name="fname" ng-model="athleteFormCtrl.athlete.fname" type="text" class="form-control" placeholder="First Name" required autofocus/>
+    <input name="lname" ng-model="athleteFormCtrl.athlete.lname" type="text" class="form-control" placeholder="Last Name" required/>
+    <select name="category" ng-model="athleteFormCtrl.athlete.category" class="form-control" required>
+        <option>K1H</option>
+        <option>K1D</option>
+        <option>C1H</option>
+        <option>C1D</option>
+        <option>C2M</option>
+        <option>C2H</option>
+        <option>C2D</option>
+    </select>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Analyse</button>
+</form>
