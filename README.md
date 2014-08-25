@@ -12,7 +12,6 @@ This application is made for Google App Engine.
 
 #Build
 
-    $ cd ResultAnalysis/
     $ mvn clean install
     $ mvn appengine:devserver
     
