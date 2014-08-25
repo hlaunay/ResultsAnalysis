@@ -14,12 +14,10 @@ This application is made for Google App Engine.
 
     $ cd ResultAnalysis/
     $ mvn clean install
-    $ cd resultanalysis-ear
     $ mvn appengine:devserver
     
 #Deploy
 
-    $ cd resultanalysis-ear
     $ mvn appengine:update
     
 #Architecture
