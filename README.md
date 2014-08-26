@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hlaunay/ResultsAnalysis.svg?branch=master)](https://travis-ci.org/hlaunay/ResultsAnalysis)
+
 ResultsAnalysis
 ===============
 
