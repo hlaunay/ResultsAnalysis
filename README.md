@@ -6,7 +6,8 @@ ResultsAnalysis
 
 Web application made to analyse sports results and display statistics
 
-This application is made for Google App Engine.
+This application is made for Google App Engine. Watch the production 
+application at [http://results-analysis.appspot.com](http://results-analysis.appspot.com/)
 
 #Requirements
 
