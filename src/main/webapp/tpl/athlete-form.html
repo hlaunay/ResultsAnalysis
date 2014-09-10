@@ -1,6 +1,7 @@
 <form class="form-search" name="searchForm" role="form" ng-submit="searchForm.$valid && athleteFormCtrl.search()" novalidate>
     <blockquote>
-        <b>{{athleteFormCtrl.athlete.fname}}</b> {{athleteFormCtrl.athlete.lname}}<br/>
+        <b>{{athleteFormCtrl.athlete.fname}}</b>
+        {{athleteFormCtrl.athlete.lname}}<br/>
         {{athleteFormCtrl.athlete.category}}
     </blockquote>
     <h2 class="form-search-heading">Athlete</h2>
@@ -15,5 +16,8 @@
         <option>C2H</option>
         <option>C2D</option>
     </select>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Analyse</button>
+    <button class="btn btn-lg btn-primary pull-right" type="submit">
+        <span class="glyphicon glyphicon-search"></span>
+        Analyse
+    </button>
 </form>

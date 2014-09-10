@@ -3,7 +3,9 @@
 
     app.directive('athleteForm', function(){
         return{
-            restrict: 'E',
+            restrict: 'AE',
+            // declare the directive scope as private (and empty)
+            scope: {},
             templateUrl: 'tpl/athlete-form.html',
             controller: function(){
                 this.athlete={};
