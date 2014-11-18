@@ -1,3 +1,6 @@
+function init() {
+    windows.init();
+}
 (function(){
     var app = angular.module('analysis', []);
 

@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <!-- Font awesome -->
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Own stylesheet -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,31 +22,39 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-app="analysis">
+  <body>
     <header class="navbar navbar-inverse navbar-fixed-top" id="top" role="banner">
       <div class="container">
           <div class="navbar-header">
               <a href="#" class="navbar-brand">Results Analysis</a>
           </div>
-          <!--
           <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
               <ul class="nav navbar-nav">
-                  <li>
-                      <a href="../getting-started">Getting started</a>
-                  </li>
+                  <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="/about"><i class="fa fa-shield"></i> About</a></li>
               </ul>
           </nav>
-          -->
       </div>
     </header>
 
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view></div>
+    </div>
+
+    <!--
     <div id="container-main" class="container">
         <div class="row">
             <div class="col-xs-4 col-xs-offset-4">
                 <div athlete-form></div>
             </div>
         </div>
-    </div> <!-- /container -->
+    </div>
+    -->
+    <!-- /container -->
+
     <footer class="footer" role="contentinfo">
         <div class="container">
         </div>
@@ -59,9 +69,15 @@
 
     <!-- Angular application -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.18/angular.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.18/angular-route.js"></script>
+    <!-- main angular application -->
+    <script type="text/javascript" src="app/app.module.js"></script>
+    <script type="text/javascript" src="app/app.routes.js"></script>
+    <!-- application components -->
+    <script type="text/javascript" src="app/components/home/homeController.js"></script>
 
     <!-- Tout à la fin de la page html: -->
+    <!--
     <script>
         var init = function() {
           var rootApi = 'http://localhost:8080/_ah/api';
@@ -74,6 +90,8 @@
           }, rootApi);
         }
     </script>
+    -->
+    <!-- google endpoint api -->
     <script src="https://apis.google.com/js/client.js?onload=init"></script>
   </body>
 </html>
