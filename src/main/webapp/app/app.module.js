@@ -1,20 +1,19 @@
 // javascript closure
 (function(){
-
-    // init function for google endpoint loading
-    function init(){
-        windows.init();
-    }
-
     // module analysis setting
     angular
         .module('analysis', ['ngRoute'])
-        .controller('mainController', mainController);
+        .controller('mainController', ['$scope', '$location', '$window', mainController]);
 
     // main module controller
-    function mainController($scope, $windows){
-        $windows.init= function() {
-            $scope.apply($scope.load_athleteapi_lib);
+    function mainController($scope, $location, $window){
+        $scope.getClass= function(path){
+            var loc = $location.path().substr(0, path.length);
+            if (loc == path) {
+                return "active"
+            } else {
+                return ""
+            }
         }
 
         $scope.load_athleteapi_lib= function() {
@@ -27,5 +26,14 @@
                 });
             }, rootApi);
         }
+
+        $window.init= function() {
+            $scope.apply($scope.load_athleteapi_lib);
+        }
+    }
+
+    // init function for google endpoint loading
+    function init(){
+        window.init();
     }
 })();

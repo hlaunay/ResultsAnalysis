@@ -5,10 +5,14 @@
 
     function config($routeProvider) {
         $routeProvider
-            .when('/', {
+            .when('/home', {
                 templateUrl: 'app/components/home/homeView.html',
                 controller: 'homeController',
                 controllerAs: 'vm'
-            });
+            })
+            .when('/about', {
+                templateUrl: 'app/components/about/aboutView.html'
+            })
+            .otherwise({redirectTo: '/home'});
     }
 })();

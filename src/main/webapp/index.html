@@ -1,4 +1,4 @@
-<html lang="en" ng-app="analysis">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body ng-app="analysis" ng-controller="mainController">
     <header class="navbar navbar-inverse navbar-fixed-top" id="top" role="banner">
       <div class="container">
           <div class="navbar-header">
@@ -30,8 +30,8 @@
           </div>
           <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
               <ul class="nav navbar-nav">
-                  <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                  <li><a href="/about"><i class="fa fa-shield"></i> About</a></li>
+                  <li ng-class="getClass('/home')"><a href="#/home"><i class="fa fa-home"></i> Home</a></li>
+                  <li ng-class="getClass('/about')"><a href="#/about"><i class="fa fa-shield"></i> About</a></li>
               </ul>
           </nav>
       </div>
