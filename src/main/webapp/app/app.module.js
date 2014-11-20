@@ -1,3 +1,10 @@
+'use strict';
+
+// init function for google endpoint loading
+function init(){
+    window.init();
+}
+
 // javascript closure
 (function(){
     // module analysis setting
@@ -7,6 +14,10 @@
 
     // main module controller
     function mainController($scope, $location, $window){
+        $window.init= function() {
+            $scope.$apply($scope.load_athleteapi_lib);
+        };
+
         $scope.getClass= function(path){
             var loc = $location.path().substr(0, path.length);
             if (loc == path) {
@@ -14,7 +25,7 @@
             } else {
                 return ""
             }
-        }
+        };
 
         $scope.load_athleteapi_lib= function() {
             var rootApi = 'http://localhost:8080/_ah/api';
@@ -25,15 +36,6 @@
                     console.log(resp);
                 });
             }, rootApi);
-        }
-
-        $window.init= function() {
-            $scope.apply($scope.load_athleteapi_lib);
-        }
-    }
-
-    // init function for google endpoint loading
-    function init(){
-        window.init();
+        };
     }
 })();
