@@ -30,7 +30,7 @@ function init(){
         };
 
         $scope.load_athleteapi_lib= function() {
-            var rootApi = 'http://localhost:8080/_ah/api';
+            var rootApi = 'http://results-analysis.appspot.com/_ah/api';
             gapi.client.load('athleteapi', 'v1', function() {
                 console.log("athleteapi api loaded");
                 $rootScope.isBackEndReady = true;
