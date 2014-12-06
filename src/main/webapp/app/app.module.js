@@ -10,10 +10,12 @@ function init(){
     // module analysis setting
     angular
         .module('analysis', ['ngRoute'])
-        .controller('mainController', ['$scope', '$location', '$window', mainController]);
+        .controller('mainController', ['$scope', '$location', '$window', '$rootScope', mainController]);
 
     // main module controller
-    function mainController($scope, $location, $window){
+    function mainController($scope, $location, $window, $rootScope){
+        $rootScope.isBackEndReady = false;
+
         $window.init= function() {
             $scope.$apply($scope.load_athleteapi_lib);
         };
@@ -31,10 +33,7 @@ function init(){
             var rootApi = 'http://localhost:8080/_ah/api';
             gapi.client.load('athleteapi', 'v1', function() {
                 console.log("athleteapi api loaded");
-                // Appeler l'api athleteapi
-                gapi.client.athleteapi.athleteEndPoint.getAthlete().execute(function(resp) {
-                    console.log(resp);
-                });
+                $rootScope.isBackEndReady = true;
             }, rootApi);
         };
     }
